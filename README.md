@@ -1,5 +1,5 @@
 # machine-setup-ubuntu
-An automated setup for a ubuntu desktop enviornment. README.md included.
+An automated setup for a ubuntu desktop environment. README.md included.
 
 ## Installation steps
 
