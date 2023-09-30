@@ -22,6 +22,10 @@ echo "********** Starting apt autoremove. **********"
 apt autoremove -y
 echo "********** Finished apt autoremove. **********"
 echo
+echo "********** Starting install software-properties-common. **********"
+apt install software-properties-common
+echo "********** Finished install software-properties-common. **********"
+echo
 echo "********** Press Enter To Continue To git Setup... **********"
 read
 bash git.sh

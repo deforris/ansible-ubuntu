@@ -1,0 +1,12 @@
+- name: Add repository
+  apt_repository: 
+    update_cache: true
+    repo: deb http://repository.spotify.com stable non-free
+    state: latest
+
+- name: Install spotify
+  apt: 
+    update_cache: true
+    name: 
+      - spotify-client
+    state: latest

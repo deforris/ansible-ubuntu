@@ -1,0 +1,8 @@
+- name: Remove Useless Packages From Cache
+  become: true
+  apt:
+    autoclean: yes
+- name: Remove Useless Dependencies From Storage
+  become: true
+  apt:
+    autoremove: yes

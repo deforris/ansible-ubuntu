@@ -8,10 +8,27 @@
 #notes           :Installs and configures ansible minimally making sure I didnt forget anything.
 #==============================================================================
 echo
+echo "********** Starting python3-pip Install. **********"
+apt install python3-pip
+echo "********** Finished python3-pip Install. **********" 
+echo
 echo "********** Starting ansible Install. **********"
-apt install ansible -y
+apt-add-repository -y ppa:ansible/ansible
+apt update
+apt install -y ansible
 echo "********** Finished ansible Install. **********" 
 echo
-echo "********** Starting git Install. **********"
-apt install git -y
-echo "********** Finished git Install. **********"
+echo "********** Starting Ansible Install Check. **********"
+ansible --version
+echo 
+echo "********** Press Enter To Continue To Ansible Playbooks... **********"
+read
+echo "********** Finished Ansible Install Check. **********" 
+echo
+echo "********** Starting ansible-pull **********"
+echo FIX ME HERE
+echo FIX ME HERE
+echo FIX ME HERE
+echo FIX ME HERE
+echo FIX ME HERE
+echo "********** Finished ansible-pull. **********"
