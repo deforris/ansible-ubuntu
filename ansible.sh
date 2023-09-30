@@ -26,9 +26,5 @@ read
 echo "********** Finished Ansible Install Check. **********" 
 echo
 echo "********** Starting ansible-pull **********"
-echo FIX ME HERE
-echo FIX ME HERE
-echo FIX ME HERE
-echo FIX ME HERE
-echo FIX ME HERE
+ansible-pull -U https://github.com/deforris/machine-setup-ubuntu.git
 echo "********** Finished ansible-pull. **********"
