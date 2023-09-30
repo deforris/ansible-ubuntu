@@ -15,5 +15,4 @@
   tasks:
     - import_tasks: tasks/git.yml
     - import_tasks: tasks/brave.yml
-    - import_tasks: tasks/edge.yml
     - import_tasks: tasks/cleanup.yml
