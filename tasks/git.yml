@@ -1,0 +1,37 @@
+- name: Git Personal Setup Email
+  become: true
+  git_config:
+    name: user.email
+    scope: global
+    value: "jesse.muniz@deforris.com"
+  tags:
+    - setup
+    - git-personal
+- name: Git Personal Setup Name
+  become: true
+  git_config:
+    name: user.name
+    scope: global
+    value: "deforris"
+  tags:
+    - setup
+    - git-personal
+- name: Git Work Setup Email
+  become: true
+  git_config:
+    name: user.email
+    scope: global
+    value: "jmuniz@cdcsoftware.com"
+  tags:
+    - setup
+    - git-work
+- name: Git Work Setup Name
+  become: true
+  git_config:
+    name: user.name
+    scope: global
+    value: "jmuniz"
+  tags:
+    - setup
+    - git-work
+

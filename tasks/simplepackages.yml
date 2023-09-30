@@ -1,0 +1,29 @@
+- name: Install packages
+  become: true
+  apt:
+    update_cache: true
+    name:
+      - chromium-browser
+      - ffmpeg
+      - fzf
+      - gimp
+      - i3
+      - mpv
+      - neovim
+      - nmap
+      - redshift
+      - ripgrep
+      - screenkey
+      - shutter
+      - stow
+      - tldr
+      - tmux
+      - wavemon
+      - wireshark
+      - zsh
+    state: latest
+  tags:
+    - install
+    - simple
+    - packages
+    - breakout

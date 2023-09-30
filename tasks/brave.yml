@@ -1,0 +1,21 @@
+- name: PreReq Libraries for Brave
+  become: true
+  apt:
+    update_cache: true
+    name: 
+      - curl
+      - apt-transport-https
+    state: present
+    tags:
+      - brave
+      - prereqs
+      - install
+- name: Brave Browser Install
+  become: true
+  apt:
+    update_cache: true
+    name: brave-browser
+    state: present
+    tags:
+      - brave
+      - install
