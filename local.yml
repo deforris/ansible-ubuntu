@@ -14,5 +14,6 @@
       - local
   tasks:
     - import_tasks: tasks/git.yml
+    - import_tasks: tasks/simplepackages.yml
     - import_tasks: tasks/brave.yml
     - import_tasks: tasks/cleanup.yml
