@@ -3,7 +3,7 @@
 #description     :Setup git.
 #author		       :deforris
 #date            :20230930
-#version         :1.0.1
+#version         :1.0.2
 #usage		       :bash git.sh
 #notes           :Installs and configures git minimally making sure I didnt forget anything.
 #==============================================================================
@@ -19,7 +19,7 @@ git config --global color.ui auto
 echo "********** Finished git Configuration. **********"
 echo
 echo "********** Starting ssh key and agent **********"
-ssh-keygen -t ed25519 -C jesse.muniz@deforris.com
+ssh-keygen -t ed25519 -C jesse.muniz@deforris.com -f ~/.ssh/id_ed25519
 ssh-add ./.ssh/id_ed25519
 echo Add ssh key to github...
 cat ./.ssh/id_ed25519.pub
