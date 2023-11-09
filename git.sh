@@ -1,10 +1,10 @@
 #!/bin/bash -       
 #title           :git
 #description     :Setup git.
-#author		 :deforris
+#author		       :deforris
 #date            :20230930
-#version         :1.0.0
-#usage		 :bash git.sh
+#version         :1.0.1
+#usage		       :bash git.sh
 #notes           :Installs and configures git minimally making sure I didnt forget anything.
 #==============================================================================
 echo
