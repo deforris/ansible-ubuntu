@@ -23,6 +23,8 @@ ssh-keygen -t ed25519 -C jesse.muniz@deforris.com
 ssh-add ./.ssh/id_ed25519
 echo Add ssh key to github...
 cat ./.ssh/id_ed25519.pub
+echo Use machine name -vvv-
+hostname
 echo Press enter when done...
 read
 echo "********** Finished ssh key and agent **********"
