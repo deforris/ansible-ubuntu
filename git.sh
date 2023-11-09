@@ -3,7 +3,7 @@
 #description     :Setup git.
 #author		       :deforris
 #date            :20230930
-#version         :1.0.3
+#version         :1.0.4eval "$(ssh-agent -s)"
 #usage		       :bash git.sh
 #notes           :Installs and configures git minimally making sure I didnt forget anything.
 #==============================================================================
@@ -20,10 +20,11 @@ echo "********** Finished git Configuration. **********"
 echo
 echo "********** Starting ssh key and agent **********"
 ssh-keygen -t ed25519 -C jesse.muniz@deforris.com -f ~/.ssh/id_ed25519
+eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 echo Add ssh key to github...
 cat ~/.ssh/id_ed25519.pub
-echo Use machine name -vvv-
+echo Use machine name shown below...
 hostname
 echo Press enter when done...
 read
