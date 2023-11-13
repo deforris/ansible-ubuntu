@@ -3,7 +3,7 @@
 #description     :Setup git.
 #author		       :deforris
 #date            :20230930
-#version         :1.0.8
+#version         :1.0.9
 #usage		       :bash git.sh
 #notes           :Installs and configures git minimally making sure I didnt forget anything.
 #==============================================================================
@@ -35,6 +35,7 @@ echo "********** Starting git clone of ansible-ubuntu **********"
 mkdir $(pwd)/deforris
 cd $(pwd)/deforris/
 git clone git@github.com:deforris/machine-setup-ubuntu.git
+cd machine-setup-ubuntu
 echo "********** Finished git clone of ansible-ubuntu **********"
 echo
 echo "********** Press Enter To Continue To Ansible... **********"
