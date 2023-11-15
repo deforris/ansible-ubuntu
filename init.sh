@@ -2,30 +2,43 @@
 #title         :init
 #description   :A clean starting point on automatic install.
 #author		     :deforris
-#date          :202301109
-#version       :1.0.1
+#date          :202301114
+#version       :2.0.0
 #usage		     :bash init.sh
 #notes         :Starts git install and update stuff before ansible to prevent any conflicts.
 #==============================================================================
+source ./logger.sh
+SCRIPTENTRY
+
 echo
-echo "********** Deforris - Ubuntu Desktop Enviornment Setup **********"
+INFO Before installations can begin we need a few details.
+read -p "Please enter current username: " USERNAME
+read -p "Is this a reinstall?: " REINSTALL && [[ $REINSTALL == [yY] || $REINSTALL == [yY][eE][sS] ]] || DEBUG "Not a reinstall"
+read -p "Do you want a clean install?:" CLEANINSTALL && [[ $CLEANINSTALL == [yY] || $CLEANINSTALL == [yY][eE][sS] ]] || DEBUG "Not a clean install"
+export USERNAME
+export REINSTALL
+export CLEANINSTALL
+DEBUG "Username $USERNAME"
 echo
-echo "********** Starting apt update. **********"
+INFO "********** Deforris - Ubuntu Desktop Enviornment Setup **********"
+echo
+INFO "********** Starting apt update. **********"
 apt update -y
-echo "********** Finished apt update. **********"
+INFO "********** Finished apt update. **********"
 echo
-echo "********** Starting apt upgrade. **********"
+INFO "********** Starting apt upgrade. **********"
 apt upgrade -y
-echo "********** Finished apt upgrade. **********"
+INFO "********** Finished apt upgrade. **********"
 echo
-echo "********** Starting apt autoremove. **********"
+INFO "********** Starting apt autoremove. **********"
 apt autoremove -y
-echo "********** Finished apt autoremove. **********"
+INFO "********** Finished apt autoremove. **********"
 echo
-echo "********** Starting install software-properties-common. **********"
+INFO "********** Starting install software-properties-common. **********"
 apt install software-properties-common
-echo "********** Finished install software-properties-common. **********"
+INFO "********** Finished install software-properties-common. **********"
 echo
-echo "********** Press Enter To Continue To git Setup... **********"
+INFO "********** Press Enter To Continue To git Setup... **********"
 read
+SCRIPTEXIT
 bash git.sh
