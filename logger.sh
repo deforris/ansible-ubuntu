@@ -9,7 +9,7 @@
 #credit        :https://www.cubicrace.com/2016/03/efficient-logging-mechnism-in-shell.html
 #==============================================================================
 
-SCRIPT_LOG=/home/cubicrace/SystemOut.log
+SCRIPT_LOG=/home/$USERNAME/.log
 touch $SCRIPT_LOG
 
 function SCRIPTENTRY(){
