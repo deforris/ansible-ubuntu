@@ -8,17 +8,25 @@
 #notes         :Starts git install and update stuff before ansible to prevent any conflicts.
 #==============================================================================
 source ./logger.sh
-SCRIPTENTRY
 
-echo
-INFO Before installations can begin we need a few details.
-read -p "Please enter current username: " USERNAME
+echo Before installations can begin we need a few details.
+read -p "Please enter username to setup under: " USERNAME
 read -p "Is this a reinstall?: " REINSTALL && [[ $REINSTALL == [yY] || $REINSTALL == [yY][eE][sS] ]] || DEBUG "Not a reinstall"
 read -p "Do you want a clean install?:" CLEANINSTALL && [[ $CLEANINSTALL == [yY] || $CLEANINSTALL == [yY][eE][sS] ]] || DEBUG "Not a clean install"
+LOCALPATH="/home/$USERNAME/"
+REPOPATH="/home/$USERNAME/deforris"
+INSTALLPATH="/home/$USERNAME/deforris/machine-setup-ubuntu/"
 export USERNAME
 export REINSTALL
 export CLEANINSTALL
-DEBUG "Username $USERNAME"
+export INSTALLPATH
+SCRIPTENTRY
+DEBUG "USERNAME $USERNAME"
+DEBUG "REINSTALL $REINSTALL"
+DEBUG "CLEANINSTALL $CLEANINSTALL"
+DEBUG "LOCALPATH $LOCALPATH"
+DEBUG "REPOPATH $REPOPATH"
+DEBUG "INSTALLPATH $INSTALLPATH"
 echo
 INFO "********** Deforris - Ubuntu Desktop Enviornment Setup **********"
 echo
